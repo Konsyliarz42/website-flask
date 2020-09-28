@@ -1,0 +1,27 @@
+<html lang="pl">
+    <head>
+        <title>My first website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="display-4"><strong>Witaj na mojej stronie</strong></h1>
+                    </div>
+                    <div class="col">
+                        <img src="{{url_for('static', filename='Logo.png')}}" alt="This is my logo" title="My logo" style="width: 256px;" class="mx-auto d-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+{% block content %}{% endblock %}

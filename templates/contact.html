@@ -1,9 +1,6 @@
 {% extends "base.html" %}
-
-{% block content %}
 <!DOCTYPE html>
-
-    <body>
+{% block content %}
         <div class="container-fluid p-2 m-0 border text-center bg-dark">
             <h1 class="font-weight-light text-light">Kontakt</h1>
         </div>
@@ -16,28 +13,27 @@
 
         <div class="container border shadow p-4 mb-4 bg-white">
             <div class="jumbotron m-0 p-2 text-center"><h4>Wyślij wiadomość</h1></div>
-            <div class="form-group">
-                <form action="" method="POST">
+            <form action="" method="POST">
+                <div class="form-group">
                     <label class="my-2" for="theme">Temat:</label>
-                    <input type="text" class="form-control" id="theme">
-                    <form action="" method="POST">
+                    <input name="theme" type="text" class="form-control" id="theme">
                     <label class="mt-2" for="comment">Wiadomość:</label>
-                    <textarea class="form-control" rows="4" id="comment"></textarea>
+                    <textarea name="message" class="form-control" rows="4" id="comment"></textarea>
                     <label class="my-2" for="usr">Twój e-mail:</label>
-                    <input type="email" class="form-control" id="usr">
-                </form>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary px-4">Prześlij</button>
+                    <input name="from" type="email" class="form-control" id="usr">
+                </div>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-muted border dropdown-toggle px-4" data-toggle="dropdown">Kategoria</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item active">Pytanie</a>
-                        <a class="dropdown-item">Informacja</a>
-                        <a class="dropdown-item">Skarga</a>
+                    <button class="btn btn-primary px-4" type="submit">Prześlij</button>
+                    <div class="btn-group">
+                        <select name="category" class="btn btn-muted border dropdown-toggle">
+                            <div class="dropdown-menu">
+                                <option class="dropdown-item">Pytanie</option>
+                                <option class="dropdown-item">Informację</option>
+                                <option class="dropdown-item">Skargę</option>
+                            </div>
+                        </select>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </body>
 {% endblock %}
